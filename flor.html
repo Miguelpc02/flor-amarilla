@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .flor {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            animation: girar 5s infinite linear;
+        }
+
+        .petalo {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform-origin: 50% 100px;
+        }
+
+        .petalo:nth-child(1) { transform: rotate(0deg); }
+        .petalo:nth-child(2) { transform: rotate(45deg); }
+        .petalo:nth-child(3) { transform: rotate(90deg); }
+        .petalo:nth-child(4) { transform: rotate(135deg); }
+        .petalo:nth-child(5) { transform: rotate(180deg); }
+        .petalo:nth-child(6) { transform: rotate(225deg); }
+        .petalo:nth-child(7) { transform: rotate(270deg); }
+        .petalo:nth-child(8) { transform: rotate(315deg); }
+
+        @keyframes girar {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .nombre {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff8c00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="flor">
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+        <div class="petalo"></div>
+    </div>
+    <div class="nombre">Yamile</div>
+</body>
+</html>
